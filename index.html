@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25:00 - ポモドーロタイマー</title>
+    <link rel="icon" type="image/svg+xml" href="img/timer-svgrepo-com.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="timer-display">
+        <div id="time">25:00</div>
+      </div>
+
+      <div class="status">
+        <div id="cycle-info">サイクル 1 - 集中時間</div>
+      </div>
+
+      <div class="controls">
+        <button id="start-stop-btn" class="main-button">開始</button>
+      </div>
+
+      <div class="settings">
+        <label class="switch">
+          <input type="checkbox" id="sound-toggle" checked />
+          <span class="slider"></span>
+          <span class="switch-label">音声通知</span>
+        </label>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

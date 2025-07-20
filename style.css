@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.timer-display {
+  margin-bottom: 30px;
+}
+
+#time {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #e74c3c;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+.status {
+  margin-bottom: 30px;
+}
+
+#cycle-info {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+.main-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.main-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.main-button:active {
+  transform: translateY(0);
+}
+
+.main-button.stop {
+  background-color: #e74c3c;
+}
+
+.main-button.stop:hover {
+  background-color: #c0392b;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #3498db;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.switch-label {
+  font-size: 0.9rem;
+  color: #666;
+  user-select: none;
+}
+
+/* 集中時間と休憩時間での色分け */
+.container.focus #time {
+  color: #e74c3c;
+}
+
+.container.break #time {
+  color: #27ae60;
+}
+
+.container.focus .main-button {
+  background-color: #e74c3c;
+}
+
+.container.focus .main-button:hover {
+  background-color: #c0392b;
+}
+
+.container.break .main-button {
+  background-color: #27ae60;
+}
+
+.container.break .main-button:hover {
+  background-color: #229954;
+}
