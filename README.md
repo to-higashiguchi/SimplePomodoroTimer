@@ -1,0 +1,2 @@
+# SimplePomodoroTimer
+シンプルなポモドーロタイマーアプリケーション
